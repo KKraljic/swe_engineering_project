@@ -1,0 +1,33 @@
+<div class="app-bar navy" data-role="appbar" ui-view="nav-bar">
+    <a class="app-bar-element" ui-sref="home">Home</a>
+    <span class="app-bar-divider"></span>
+    <ul class="app-bar-menu">
+        <li><a ui-sref="create_event">Create</a></li>
+        <li><a ui-sref="see_events">Explore</a></li>
+        <li><a ui-sref="logout_places">Logout</a></li>
+</div>
+<div class="padding20" ui-view="create-event-form" ng-controller="detailedViewController" ng-init="loadDetails()">
+    <form role="form">
+        <h1 class="leader">Please see the details of this event:</h1>
+        <p>Title of the Event: {{eventDetails.title}}</p>
+        <br/>
+
+        <p>Host of the Event: {{eventDetails.eventowner}}</p>
+        <br/>
+        <p>Description: {{eventDetails.description}}</p>
+        <br/>
+        <p>Date of the Event: {{eventDetails.eventdate}}</p>
+        <br/>
+        <p>Time of the Event: {{eventDetails.eventtime}}</p>
+        <br/>
+
+        <div class="rating" data-role="rating"></div>
+        <br/>
+        <br/>
+
+        <a ui-sref="see_events">
+            <button type="submit" class="button success">Go back to event overview</button>
+        </a>
+
+    </form>
+</div>

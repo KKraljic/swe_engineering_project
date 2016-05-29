@@ -1,0 +1,28 @@
+{
+  "name": "WebEngineering",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.5",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-jscs": "^2.8.0",
+    "grunt-karma": "^1.0.0",
+    "jasmine": "^2.4.1",
+    "jscs": "^3.0.3",
+    "jshint": "^2.9.2",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-spec-reporter": "0.0.26"
+  },
+  "dependencies": {
+    "angular-cookies": "^1.5.5",
+    "hashmap": "^2.0.6"
+  }
+}

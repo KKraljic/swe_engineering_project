@@ -1,0 +1,70 @@
+<div class="app-bar navy" data-role="appbar" ui-view="nav-bar">
+    <ul class="app-bar-menu">
+        <li><a ui-sref="register">Register</a></li>
+        <li><a ui-sref="login">Login</a></li>
+</div>
+<div class="login-form padding20" ui-view="register-form">
+    <form ng-controller="registerUserViewController">
+        <h1 class="leader">Register for P!aceS: {{user.nickname}}</h1>
+        <br />
+        <div class="input-control text full-size" data-role="input">
+            <label for="user_name">Username:</label>
+            <input type="text" name="user_name" id="user_name" ng-model="user.nickname">
+            <button class="button helper-button clear"><span class="mif-cross"></span></button>
+        </div>
+        <br />
+        <br />
+        <div class="input-control password full-size" data-role="input">
+            <label for="user_password">User password:</label>
+            <input type="password" name="user_password" id="user_password" ng-model="user.password">
+            <button class="button helper-button reveal"><span class="mif-looks"></span></button>
+        </div>
+        <br />
+        <br />
+
+        <div class="input-control text full-size" data-role="input">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" ng-model="user.firstname">
+            <button class="button helper-button clear"><span class="mif-cross"></span></button>
+        </div>
+        <br />
+        <br />
+
+        <div class="input-control text full-size" data-role="input">
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" ng-model="user.lastname">
+            <button class="button helper-button clear"><span class="mif-cross"></span></button>
+        </div>
+        <br />
+        <br />
+
+        <div class="input-control text full-size" data-role="input">
+            <label for="phone_number">Cell Phone Number:</label>
+            <input type="text" name="phone_number" id="phone_number" ng-model="user.properties.mobilephone">
+            <button class="button helper-button clear"><span class="mif-cross"></span></button>
+        </div>
+        <br />
+        <br />
+
+        <div class="input-control text full-size" data-role="input">
+            <label for="fc_account">Facebook Account:</label>
+            <input type="text" name="fc_account" id="fc_account" ng-model="user.properties.facebook">
+            <button class="button helper-button clear"><span class="mif-cross"></span></button>
+        </div>
+        <br />
+        <br />
+
+        <div class="input-control text" data-role="datepicker" data-preset="2016-05-06">
+            <label for="birthday">Choose your birthday:</label>
+            <input type="text" name="birthday" id="birthday" ng-model="user.properties.birthday">
+            <button class="button" type="button">   
+                           <span class="mif-calendar"></span>
+            </button>
+
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="button success" ng-click="submit()">Register!</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="node_modules/metro-dist/css/metro.css" rel="stylesheet">
+    <link href="node_modules/metro-dist/css/metro-schemes.css" rel="stylesheet">
+    <link href="node_modules/metro-dist/css/metro-icons.min.css" rel="stylesheet">
+    <link href="css/customize-metro-ui.css" rel="stylesheet">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/metro-dist/js/metro.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="node_modules/hashmap/hashmap.js"></script>
+    <script src="javascript/routerApp.js"></script>
+    <script src="javascript/Controllers/controllers.js">
+
+    </script>
+    <script src="javascript/Services/services.js"></script>
+    <title>Come On :)</title>
+</head>
+
+<body ng-app="routerApp">
+    <div ui-view="main-view">
+            <div class="app-bar navy" data-role="appbar" ui-view="nav-bar">
+                <ul class="app-bar-menu">
+                    <li><a ui-sref="register">Register</a></li>
+                    <li><a ui-sref="login">Login</a></li>
+            </div>
+            <h1 class="leader">Welcome to P!aceS - Make the world a better P!ace</h1>
+            <h2 class="sub-header">Register or log on:</h2>
+
+
+            <div class="tile tile-large" data-role="tile">
+                <div class="tile-content">
+                    <a ui-sref="register">
+                        <div class="image-container">
+                            <div class="frame">
+                                <img src="../pictures/new-user.png" />
+                            </div>
+                            <div class="image-overlay">
+                                Register!
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="tile tile-large" data-role="tile">
+                <div class="tile-content">
+                    <a ui-sref="login">
+                        <div class="image-container">
+                            <div class="frame">
+                                <img src="../pictures/login.png" />
+                            </div>
+                            <div class="image-overlay">
+                                Log on!
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

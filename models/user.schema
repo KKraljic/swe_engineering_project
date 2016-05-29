@@ -1,0 +1,14 @@
+{
+  "nickname": "string",
+  "password": "string",
+  "firstname": "string",
+  "lastname": "string",
+  "properties":
+    {
+      "mobilephone": "string",
+      "email": "string",
+      "facebook" : "string",
+      "birthday" : "string",
+      "registertime": "integer"
+    }
+  }

@@ -1,0 +1,5 @@
+{
+  "event-id":"string",
+  "itemlist-id":"string",
+  "item-array":"array"
+}

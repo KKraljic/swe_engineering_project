@@ -1,0 +1,10 @@
+{
+  "eventowner": "string",
+  "eventid": "string",
+  "title":"string",
+  "description": "string",
+  "eventdate":"string",
+  "eventtime":"string",
+  "onFacebook": "boolean",
+  "public":"boolean"
+}

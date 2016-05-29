@@ -1,0 +1,41 @@
+<div class="app-bar navy" data-role="appbar" ui-view="nav-bar">
+    <a class="app-bar-element" ui-sref="home">Home</a>
+    <span class="app-bar-divider"></span>
+    <ul class="app-bar-menu">
+        <li><a ui-sref="create_event">Create</a></li>
+        <li><a ui-sref="see_events">Explore</a></li>
+        <li><a ui-sref="logout_places">Logout</a></li>
+</div>
+<h1 class="leader">Welcome to P!aceS - Make the world a better P!ace</h1>
+<h2 class="sub-header">Please choose what to do:</h2>
+
+<div class="tile tile-large" data-role="tile">
+    <div class="tile-content">
+        <a ui-sref="create_event">
+            <div class="image-container">
+                <div class="frame">
+                    <img src="../pictures/new-event.png" />
+                </div>
+                <div class="image-overlay">
+                    Create an Event!
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="tile tile-large" data-role="tile">
+    <div class="tile-content">
+        <a ui-sref="see_events">
+            <div class="image-container">
+                <div class="frame">
+                    <img src="../pictures/get-events.png" />
+                </div>
+                <div class="image-overlay">
+                    See all available Events!
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+

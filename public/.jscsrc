@@ -1,0 +1,6 @@
+{
+  "preset": "jquery",
+  "disallowTrailingWhitespace": null,
+  "validateLineBreaks": "CRLF",
+  "maximumLineLength": null
+}

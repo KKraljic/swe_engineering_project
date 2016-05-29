@@ -1,0 +1,82 @@
+#%RAML 1.0
+title: NodeJS P!aces Backend ReST
+version: v1
+baseUri: http://localhost:27017
+schemas:
+  user: !include schemas/user.schema
+  event: !include schemas/event.schema
+  login: !include schemas/login.schema
+  eventlist: !include schemas/eventlist.schema
+/service:
+  /user:
+    post:
+      description: |
+        Register a new user
+      body:
+        application/json:
+          type: user
+      responses:
+        201:
+          description: |
+            Succesfully registered the user
+    /login:
+      get:
+        description: |
+          Login the user provided by query parameters
+          and get the unique user id needed for later calls
+        queryParameters:
+          nickname: string
+          password: string
+        responses:
+          200:
+            description: |
+              Succesfully user login
+            body:
+              application/json:
+                type: login
+
+
+    /{nickname}:
+      get:
+        description: |
+          Retrieve the user entire userinformation by the provided
+          nickname
+        responses:
+          200:
+            description: |
+              Succesfully retrieved user resource
+            body:
+              application/json:
+                type: user
+    /events:
+      get:
+        description: |
+          Retrieve user related events
+        responses:
+          200:
+            description: |
+              Succesfully retrieved user events
+            body:
+              application/json:
+                type: event
+  /events:
+    get:
+      description: |
+        Retrieve all events
+      responses:
+        200:
+          description: |
+            Succesfully retrieved all events
+          body:
+            application/json:
+              type: eventlist
+    post:
+      description: |
+        Create a new event
+      body:
+        application/json:
+          type: event
+      responses:
+        201:
+          description: |
+            Succesfully created a new event

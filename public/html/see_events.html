@@ -1,0 +1,31 @@
+<div class="app-bar navy" data-role="appbar" ui-view="nav-bar">
+    <a class="app-bar-element" ui-sref="home">Home</a>
+    <span class="app-bar-divider"></span>
+    <ul class="app-bar-menu">
+        <li><a ui-sref="create_event">Create</a></li>
+        <li><a ui-sref="see_events">Explore</a></li>
+        <li><a ui-sref="logout_places">Logout</a></li>
+</div>
+<div class="listview-outlook event" data-role="listview" ng-controller="getAllEventsController" ng-init="getAllEvents()">
+
+
+    <div ng-repeat="event in eventList">
+        <div class="list">
+            <div class="list-content">
+                <span class="list-title">Title: {{event.title}}</span>
+                <span class="list-subtitle">Description: {{event.description}}</span>
+                <span class="list-remark place">
+                <p class="event-date">Date: {{event.eventdate}}</p> 
+                <p class="event-time">Time: {{event.eventtime}}</p> 
+                <p class="event-place"></p>
+                <p class="event-host">Owner: {{event.eventowner}}</p>
+                <div class="rating" data-role="rating"></div>
+                           
+                </span>
+
+
+            </div>
+
+        </div>
+        <button type="submit" class="button success" ng-click="getDetails(event._id)">See details for this event</button>
+    </div>

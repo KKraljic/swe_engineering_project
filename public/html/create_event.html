@@ -1,0 +1,64 @@
+<div class="app-bar navy" data-role="appbar" ui-view="nav-bar">
+    <a class="app-bar-element" ui-sref="home">Home</a>
+    <span class="app-bar-divider"></span>
+    <ul class="app-bar-menu">
+        <li><a ui-sref="create_event">Create</a></li>
+        <li><a ui-sref="see_events">Explore</a></li>
+        <li><a ui-sref="logout_places">Logout</a></li>
+</div>
+<div class="padding20" ui-view="create-event-form">
+    <form role="form" ng-controller="createEventViewController">
+        <h1 class="leader">Create event: {{ newEvent.title }}</h1>
+        <label>Title of your Event:</label>
+        <div class="input-control text full-size">
+            <input type="text" id="title" placeholder="Enter Title" ng-model="newEvent.title">
+
+        </div>
+
+        <label>Description:</label>
+        <div class="input-control text full-size">
+            <input type="text" id="description" placeholder="Enter Description" ng-model="newEvent.description">
+        </div>
+
+        <br/>
+        <br/>
+
+        <div class="input-control text" data-role="datepicker" data-preset="2016-05-06">
+            <label for="date_picker">Date of your Event:</label>
+            <input type="text" id="event_date">
+            <button class="button" type="button">   
+                           <span class="mif-calendar" id="date_picker"></span>
+                    </button>
+
+        </div>
+        <br/>
+        <br/>
+
+        <label class="control-label col-sm-2" for="event_time">Time of your Event:</label>
+        <div class="col-sm-10">
+            <input type="time" id="event_time">
+        </div>
+        <br/>
+
+
+        <label class="switch">
+            <input type="checkbox" ng-model="onFacebook"> Wanna share this on Facebook?
+            <span class="check"></span>
+        </label>
+        <br/>
+        <br/>
+
+        <label class="switch">
+            <input type="checkbox" ng-model="public"> Wanna make this event public??
+            <span class="check"></span>
+        </label>
+        <br/>
+        <br/>
+
+
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="button success" ng-click="submit()" >Create your Event</button>
+        </div>
+
+    </form>
+</div>

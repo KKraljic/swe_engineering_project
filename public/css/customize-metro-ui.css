@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Metric';
+    src: url('Metric-Font/MetricApp-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'MetricBold';
+    src: url('Metric-Font/MetricApp-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'MetricLight';
+    src: url('Metric-Font/MetricApp-Light.ttf');
+}
+
+body{
+    background-color: rgb(0, 39, 95);
+    color: white;
+}
+

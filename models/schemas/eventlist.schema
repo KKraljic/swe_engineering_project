@@ -1,0 +1,5 @@
+{
+  "querytime":"integer",
+  "page":"integer",
+  "eventlist":"array" // List of events
+}
