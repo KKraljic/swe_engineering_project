@@ -5,12 +5,6 @@ routerApp.config( function( $stateProvider, $urlRouterProvider ) {
     $urlRouterProvider.otherwise( "index.html" );
     
     $stateProvider
-        .state( "add_item", {
-            url: "/add_item",
-            views: {
-                "main-view": { templateUrl: "../html/add_item.html" }
-            }
-        } )
         .state( "create_event", {
             url: "/create_event",
             views: {
@@ -48,12 +42,6 @@ routerApp.config( function( $stateProvider, $urlRouterProvider ) {
             url: "/register",
             views: {
                 "main-view": { templateUrl: "../html/register.html" }
-            }
-        } )
-        .state( "search_events", {
-            url: "/search_events",
-            views: {
-                "main-view": { templateUrl: "../html/search_events.html" }
             }
         } )
         .state( "see_events", {
